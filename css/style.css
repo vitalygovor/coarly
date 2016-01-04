@@ -1,0 +1,53 @@
+body {
+	background: #2c3e50;
+}
+
+body .editor {
+	width: auto;
+	text-align: center;
+	vertical-align: middle;
+	
+}
+
+.editor .printbox {
+	vertical-align: middle;
+	display: inline-block;
+	width: 500px;
+	height: 500px;
+	background: #34495e;
+	border-radius: 5px;
+	margin-top: 80px;
+}
+
+.editor .panelstyles {
+	vertical-align: middle;
+	display: inline-block;
+	width: 100px;
+	height: 500px;
+	text-align: center;
+	background: #34495e;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-top: 80px;
+}
+
+.element {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	background: #fff;
+	border-radius: 3px;
+	margin-top: 20px;
+}
+
+.editor .panelstyles .element:hover {
+	cursor: pointer;
+}
+
+.ui-state-default {
+	background: #3498db;
+}
+
+.ui-state-hover {
+	background: #27ae60;
+}

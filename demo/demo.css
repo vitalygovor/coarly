@@ -1,0 +1,10 @@
+#dropHere {
+    width:400px;
+    height: 400px;
+    border: dotted 1px black;
+}
+
+img {
+	width: auto;
+	height: 100px;
+}

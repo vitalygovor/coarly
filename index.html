@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test editor</title>
+  	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  	<link rel="stylesheet" type="text/css" href="css/ui.css">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="editor">
+		<div class="printbox">
+
+		</div>
+		<div class="panelstyles">
+			<div class="element"></div>
+			<div class="element"></div>
+			<div class="element"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$( "body .element" ).draggable({
+		 	revert: true,
+		 	helper: 'clone',
+		 	drag: function(event, ui){
+		 		console.log("top:"+ui.offset.top+" | top:"+ui.offset.left);
+		 	}
+		});
+		$(".printbox").droppable({
+			accept: ".panelstyles .element",
+		 	activeClass: "ui-state-default",
+			hoverClass: "ui-state-hover",
+		 	drop: function(event, ui) {
+		 		var $item = ui.draggable.clone();
+		 		console.log(ui.draggable.clone());
+		 		console.log($item.position());
+            	$(this).append($item);
+		 	}
+		});
+	});
+	</script> 
+</body>
+</html>
